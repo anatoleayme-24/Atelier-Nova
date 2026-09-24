@@ -16,7 +16,6 @@
   margin-bottom: var(--space-lg);
 }
 
-/* Un trait fin sous le dernier service */
 .list {
   margin: 0;
   padding: 0;
@@ -24,21 +23,21 @@
   border-bottom: 1px solid rgba(31, 42, 36, 0.2);
 }
 
-/* Mobile : le numéro à gauche, le nom et la description à droite */
+/* ===== MOBILE : 2 colonnes (numéro | nom + description) ===== */
 .item {
   display: grid;
-  grid-template-columns: 2.5rem 1fr;
+  grid-template-columns: 3rem 1fr;
   gap: 0.25rem var(--space-sm);
   padding: var(--space-md) 0;
-  border-top: 1px solid rgba(31, 42, 36, 0.2);   /* trait fin au-dessus de chaque service */
+  border-top: 1px solid rgba(31, 42, 36, 0.2);
 }
 
 .number {
-  grid-row: span 2;           /* le numéro occupe la hauteur du nom + de la description */
+  grid-row: span 2;
   font-family: var(--font-title);
-  font-size: 1rem;
-  color: var(--color-text-muted);
-  padding-top: 0.2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-accent-text);
 }
 
 .itemTitle {
@@ -47,21 +46,21 @@
 }
 
 .text {
-  grid-column: 2;             /* la description reste dans la colonne de droite */
+  grid-column: 2;
 }
 
-/* Desktop : 3 colonnes (numéro | nom | description) */
+/* ===== DESKTOP : 3 colonnes (numéro | nom | description) ===== */
 @media (min-width: 1024px) {
   .item {
     grid-template-columns: 5rem 1fr 1.3fr;
-    align-items: baseline;    /* aligne le bas des lettres des 3 colonnes */
+    align-items: baseline;
     gap: var(--space-lg);
     padding: var(--space-lg) 0;
   }
 
   .number {
     grid-row: auto;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 
   .text {

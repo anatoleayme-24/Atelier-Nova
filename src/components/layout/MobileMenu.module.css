@@ -1,0 +1,100 @@
+/* Le menu couvre tout l'écran, fond terracotta */
+.overlay {
+  position: fixed;
+  inset: 0;                         /* colle aux 4 bords de l'écran */
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--gutter) var(--space-lg);
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  overflow-y: auto;
+  animation: menuIn 0.25s ease;
+}
+
+/* Barre du haut : logo à gauche, bouton Fermer à droite */
+.top {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Bouton clair, comme dans la maquette */
+.close {
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* La navigation prend toute la place restante, liens centrés */
+.nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/* Grand texte (32 px) : le blanc sur terracotta passe le contraste (3,25:1) */
+.link {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Contour de focus blanc pour rester visible sur le terracotta */
+.overlay :focus-visible {
+  outline-color: #FFFFFF;
+}
+
+/* CTA en bas, pleine largeur */
+.cta a {
+  width: 100%;
+}
+
+/* Animation d'ouverture : apparition + légère descente */
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Le menu mobile n'existe pas au-dessus de 640 px */
+@media (min-width: 640px) {
+  .overlay {
+    display: none;
+  }
+}

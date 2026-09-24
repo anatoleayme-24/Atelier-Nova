@@ -4,16 +4,18 @@
   gap: 0.5rem;
 }
 
-/* Le cadre cache ce qui dépasse quand l'image zoome */
+/* Toutes les images dans le même format (4:3, paysage) */
 .media {
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  background-color: var(--color-surface);   /* visible si l'image tarde */
+  background-color: var(--color-surface);
   margin-bottom: 0.5rem;
 }
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;          /* recadre l'image pour remplir le cadre, sans la déformer */
   transition: transform 0.6s ease;
 }
 

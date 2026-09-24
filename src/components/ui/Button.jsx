@@ -2,6 +2,7 @@ import styles from "./Button.module.css";
 
 // Bouton-lien réutilisable
 // href : où mène le lien | variant : "primary" (terracotta) ou "outline" (contour)
+// onClick : fonction optionnelle lancée au clic
 export default function Button({ href, children, variant = "primary" }) {
   return (
     <a href={href} className={`${styles.button} ${styles[variant]}`}>

@@ -1,11 +1,25 @@
+import { useRef, useState } from "react";
 import Button from "../ui/Button";
+import MobileMenu from "./MobileMenu";
 import styles from "./Header.module.css";
 
 // En-tête du site : logo, navigation, bouton CTA et burger (mobile)
 // navigation : la partie "navigation" du JSON
 export default function Header({ navigation }) {
-  // "Atelier Nova" devient ["Atelier", "Nova"] pour mettre "Nova" en italique
+  const [isMenuOpen, setIsMenuOpen] = useState(false);  // le menu est-il ouvert ?
+  const burgerRef = useRef(null);                        // référence vers le burger
+
   const logoWords = navigation.logo.split(" ");
+
+  function openMenu() {
+    setIsMenuOpen(true);
+  }
+
+  // À la fermeture, on rend le focus au burger (important au clavier)
+  function closeMenu() {
+    setIsMenuOpen(false);
+    burgerRef.current.focus();
+  }
 
   return (
     <header className={styles.header} id="top">
@@ -32,8 +46,15 @@ export default function Header({ navigation }) {
           </Button>
         </div>
 
-        {/* Bouton burger : visible seulement en mobile (fonctionnel plus tard) */}
-        <button type="button" className={styles.burger} aria-label="Ouvrir le menu">
+        <button
+          ref={burgerRef}
+          type="button"
+          className={styles.burger}
+          aria-label="Ouvrir le menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+          onClick={openMenu}
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"
                aria-hidden="true">
@@ -43,6 +64,8 @@ export default function Header({ navigation }) {
           </svg>
         </button>
       </div>
+
+      <MobileMenu navigation={navigation} isOpen={isMenuOpen} onClose={closeMenu} />
     </header>
   );
 }

@@ -13,11 +13,11 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
-/* Variante principale : terracotta + texte foncé (contraste 4,8:1) */
+/* Variante principale : terracotta foncé + texte blanc (contraste 4,6:1) */
 .primary {
-  background-color: var(--color-accent);
-  border: 1.5px solid var(--color-accent);
-  color: var(--color-text);
+  background-color: var(--color-accent-strong);
+  border: 1.5px solid var(--color-accent-strong);
+  color: #FFFFFF;
 }
 
 .primary:hover {
@@ -35,5 +35,18 @@
 
 .outline:hover {
   background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Variante claire : pour les fonds colorés (menu mobile) */
+.light {
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-bg);
+  color: var(--color-text);
+}
+
+.light:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: var(--color-bg);
 }

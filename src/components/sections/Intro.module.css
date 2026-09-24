@@ -42,6 +42,7 @@
 .stat {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: flex-end;
   gap: 0.25rem;
 }
 
@@ -54,6 +55,7 @@
 }
 
 .label {
+  max-width: 5rem;            /* 80 px : "projets" et "livrés" ne tiennent plus côte à côte */
   font-size: var(--fs-small);
   color: var(--color-text-muted);
 }
@@ -83,5 +85,9 @@
 
   .value {
     font-size: 3.5rem;
+  }
+
+  .label {
+  max-width: none;            /* en desktop, il y a la place : une seule ligne */
   }
 }
