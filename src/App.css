@@ -1,0 +1,24 @@
+/* Reset minimal. Choisissez librement votre approche de style
+   (CSS Modules, Tailwind, styled-components, Sass...) : ce fichier
+   n'est qu'un point de départ, pas une contrainte. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  font-size: 1.1rem;
+}
+
+.state--error {
+  color: #b3261e;
+}

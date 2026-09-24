@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Atelier Nova — Direction artistique (référence pour le test technique)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-ink: #24231F;
+    --color-ink-muted: #6B675F;
+    --color-bg: #F7F4EF;
+    --color-card: #EDE7DD;
+    --color-primary: #1F2A24;
+    --color-accent: #C97C4B;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', system-ui, sans-serif;
+    --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+    --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px;
+    --radius: 3px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+  .doc-header {
+    background: var(--color-primary);
+    color: #fff;
+    padding: var(--space-12) var(--space-8);
+  }
+  .doc-header h1 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0 0 var(--space-2);
+  }
+  .doc-header p {
+    margin: 0;
+    max-width: 640px;
+    color: #D8D6CE;
+  }
+  section.block {
+    padding: var(--space-12) var(--space-8);
+    max-width: 1120px;
+    margin: 0 auto;
+    border-bottom: 1px solid #E1DACD;
+  }
+  section.block h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+  }
+  section.block > p.note {
+    color: var(--color-ink-muted);
+    max-width: 720px;
+    margin-top: 0;
+    margin-bottom: var(--space-8);
+  }
+
+  /* Palette */
+  .swatches { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .swatch {
+    width: 180px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid #E1DACD;
+    background: #fff;
+  }
+  .swatch .fill { height: 90px; }
+  .swatch .label { padding: var(--space-3); font-size: 0.85rem; }
+  .swatch .label strong { display: block; font-family: monospace; }
+
+  /* Typography */
+  .type-specimen { margin-bottom: var(--space-8); }
+  .type-specimen .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-muted); }
+  .h-display { font-family: var(--font-display); font-weight: 500; font-size: 2.6rem; letter-spacing: -0.01em; margin: var(--space-1) 0; }
+  .h-sub { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; margin: var(--space-1) 0; }
+  .body-text { font-family: var(--font-body); font-size: 1rem; max-width: 560px; margin: var(--space-1) 0; }
+  .body-small { font-family: var(--font-body); font-size: 0.85rem; color: var(--color-ink-muted); }
+
+  /* Spacing scale */
+  .scale-row { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-2); }
+  .scale-bar { background: var(--color-accent); height: 12px; }
+  .scale-row span { font-family: monospace; font-size: 0.85rem; width: 60px; }
+
+  ul.checklist { padding-left: 1.1em; }
+  ul.checklist li { margin-bottom: var(--space-2); }
+  code { background: #EDE7DD; padding: 1px 5px; border-radius: 2px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<header class="doc-header">
+  <h1>Atelier Nova — Direction artistique</h1>
+  <p>Référence visuelle pour le test technique d'intégration de la page d'accueil. Ce document remplace une maquette Figma : il fixe la palette, la typographie, la grille et la structure des sections attendues. Le reste (mise en page fine, micro-interactions, choix de composants) vous appartient.</p>
+</header>
+
+<section class="block">
+  <h2>Palette</h2>
+  <p class="note">Ambiance sobre et chaleureuse : fond écru, encre profonde, accent terracotta utilisé avec parcimonie (CTA, accents, survols).</p>
+  <div class="swatches">
+    <div class="swatch"><div class="fill" style="background:#1F2A24"></div><div class="label"><strong>#1F2A24</strong>Primaire — nav, footer, texte fort</div></div>
+    <div class="swatch"><div class="fill" style="background:#C97C4B"></div><div class="label"><strong>#C97C4B</strong>Accent — CTA, liens actifs, survols</div></div>
+    <div class="swatch"><div class="fill" style="background:#F7F4EF"></div><div class="label"><strong>#F7F4EF</strong>Fond principal</div></div>
+    <div class="swatch"><div class="fill" style="background:#EDE7DD"></div><div class="label"><strong>#EDE7DD</strong>Fond cartes / bandeaux</div></div>
+    <div class="swatch"><div class="fill" style="background:#24231F"></div><div class="label"><strong>#24231F</strong>Texte principal</div></div>
+    <div class="swatch"><div class="fill" style="background:#6B675F"></div><div class="label"><strong>#6B675F</strong>Texte atténué / légendes</div></div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Typographie</h2>
+  <p class="note">Un serif éditorial pour les titres (<code>Fraunces</code>), un sans-serif neutre pour le corps de texte (<code>Work Sans</code>). Les deux sont chargées via Google Fonts dans ce document ; libre à vous de les auto-héberger si vous préférez.</p>
+  <div class="type-specimen">
+    <div class="tag">Titre principal — Fraunces 500, ~2.5–3rem desktop / ~1.9rem mobile</div>
+    <div class="h-display">Des espaces pensés pour durer</div>
+  </div>
+  <div class="type-specimen">
+    <div class="tag">Titre de section — Fraunces 500, ~1.4–1.6rem</div>
+    <div class="h-sub">Notre approche</div>
+  </div>
+  <div class="type-specimen">
+    <div class="tag">Corps de texte — Work Sans 400, 1rem, line-height 1.5–1.6</div>
+    <p class="body-text">Chaque projet démarre par une écoute attentive du lieu, de ses usages et de ses habitants.</p>
+  </div>
+  <div class="type-specimen">
+    <div class="tag">Texte secondaire / légende — Work Sans 400, 0.85rem</div>
+    <p class="body-small">Résidentiel — Lyon</p>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Grille & espacements</h2>
+  <p class="note">Base 4px. Largeur de contenu max ~1200–1280px, marges latérales 24px en mobile, 64–80px en desktop. Rayon de bordure discret (2–3px) — pas d'arrondi prononcé, esprit éditorial plutôt que "app".</p>
+  <div class="scale-row"><span>4px</span><div class="scale-bar" style="width:4px"></div></div>
+  <div class="scale-row"><span>8px</span><div class="scale-bar" style="width:8px"></div></div>
+  <div class="scale-row"><span>16px</span><div class="scale-bar" style="width:16px"></div></div>
+  <div class="scale-row"><span>24px</span><div class="scale-bar" style="width:24px"></div></div>
+  <div class="scale-row"><span>32px</span><div class="scale-bar" style="width:32px"></div></div>
+  <div class="scale-row"><span>48px</span><div class="scale-bar" style="width:48px"></div></div>
+  <div class="scale-row"><span>64px</span><div class="scale-bar" style="width:64px"></div></div>
+  <p class="body-small">Points de rupture indicatifs : mobile &lt; 640px, tablette 640–1023px, desktop ≥ 1024px.</p>
+</section>
+
+<section class="block">
+  <h2>Sections de contenu attendues</h2>
+  <p class="note">La mise en page, la hiérarchie visuelle exacte et l'agencement de chaque section vous appartiennent entièrement — c'est une part importante de ce qui est évalué. Le seul repère : chacune des sections ci-dessous doit être présente et alimentée par le contenu de <code>src/data/homepage.json</code>, dans l'ordre qui vous semble le plus pertinent.</p>
+  <ul class="checklist">
+    <li><strong>Header</strong> — logo, navigation, CTA.</li>
+    <li><strong>Hero</strong> — accroche, image, CTA.</li>
+    <li><strong>Intro</strong> — texte de présentation + chiffres clés.</li>
+    <li><strong>Services / approche</strong> — les items de <code>services</code>.</li>
+    <li><strong>Projets récents</strong> — les items de <code>projects</code>.</li>
+    <li><strong>Témoignages</strong> — les items de <code>testimonials</code>.</li>
+    <li><strong>Bandeau CTA</strong> — <code>ctaBanner</code>.</li>
+    <li><strong>Footer</strong> — colonnes, réseaux sociaux, mentions légales.</li>
+  </ul>
+</section>
+
+<section class="block">
+  <h2>Comportements & interactions attendus</h2>
+  <ul class="checklist">
+    <li>Header : reste visible au scroll (sticky), légère ombre ou changement de fond dès que la page défile.</li>
+    <li>Liens de nav & CTA : état de survol visible (souligné, changement de couleur ou de fond), et état focus clavier visible (accessibilité).</li>
+    <li>Cartes projets : léger effet au survol (zoom image, overlay ou translation) pour signaler l'interactivité.</li>
+    <li>Menu mobile : le header se transforme en menu burger sous 640px environ ; à vous de choisir l'interaction (drawer, overlay plein écran…).</li>
+    <li>Chargement / erreur : le contenu vient d'un appel asynchrone simulé (voir <code>src/lib/cms.js</code>) — prévoyez un état de chargement et un état d'erreur cohérents avec la DA, pas juste un texte brut.</li>
+  </ul>
+</section>
+
+</body>
+</html>

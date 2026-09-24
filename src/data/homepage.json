@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Atelier Nova — Architecture & design d'intérieur",
+    "description": "Atelier Nova conçoit des espaces sobres et lumineux, entre architecture et design d'intérieur, à Lyon et dans toute la France."
+  },
+  "navigation": {
+    "logo": "Atelier Nova",
+    "links": [
+      { "label": "Le studio", "href": "#studio" },
+      { "label": "Projets", "href": "#projets" },
+      { "label": "Approche", "href": "#approche" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "cta": { "label": "Démarrer un projet", "href": "#contact" }
+  },
+  "hero": {
+    "eyebrow": "Architecture & design d'intérieur",
+    "title": "Des espaces pensés pour durer",
+    "subtitle": "Depuis 2014, Atelier Nova accompagne particuliers et professionnels dans la conception d'espaces sobres, lumineux et ancrés dans leur territoire.",
+    "cta": { "label": "Découvrir nos projets", "href": "#projets" },
+    "image": {
+      "src": "https://picsum.photos/seed/nova-hero/1600/2000",
+      "alt": "Intérieur lumineux avec structure bois apparente"
+    }
+  },
+  "intro": {
+    "title": "Une approche sur mesure, à taille humaine",
+    "text": "Chaque projet démarre par une écoute attentive du lieu, de ses usages et de ses habitants. Nous croyons à une architecture sobre, qui privilégie la lumière naturelle, les matériaux durables et le temps long.",
+    "stats": [
+      { "value": "10", "label": "années d'expérience" },
+      { "value": "120+", "label": "projets livrés" },
+      { "value": "18", "label": "prix & distinctions" }
+    ]
+  },
+  "services": {
+    "title": "Notre approche",
+    "items": [
+      { "id": "architecture", "title": "Architecture", "text": "Conception et suivi de chantier, de l'esquisse à la livraison." },
+      { "id": "interieur", "title": "Design d'intérieur", "text": "Aménagement d'espaces de vie et de travail, mobilier sur mesure." },
+      { "id": "conseil", "title": "Conseil & audit", "text": "Diagnostic technique et accompagnement stratégique de vos projets." },
+      { "id": "direction-artistique", "title": "Direction artistique", "text": "Choix des matériaux, palette et identité visuelle du lieu." }
+    ]
+  },
+  "projects": {
+    "title": "Projets récents",
+    "items": [
+      { "id": "maison-lumiere", "title": "Maison Lumière", "category": "Résidentiel", "location": "Lyon", "image": { "src": "https://picsum.photos/seed/nova-proj1/1200/900", "alt": "Façade en bois clair d'une maison contemporaine" } },
+      { "id": "atelier-bellevue", "title": "Atelier Bellevue", "category": "Tertiaire", "location": "Villeurbanne", "image": { "src": "https://picsum.photos/seed/nova-proj2/1200/1500", "alt": "Bureaux ouverts baignés de lumière naturelle" } },
+      { "id": "maison-des-tilleuls", "title": "Maison des Tilleuls", "category": "Résidentiel", "location": "Annecy", "image": { "src": "https://picsum.photos/seed/nova-proj3/1200/900", "alt": "Extension bois d'une maison ancienne" } },
+      { "id": "cafe-lucine", "title": "Café Lucine", "category": "Commercial", "location": "Lyon", "image": { "src": "https://picsum.photos/seed/nova-proj4/1200/1500", "alt": "Intérieur chaleureux d'un café avec banquettes en velours" } },
+      { "id": "loft-saone", "title": "Loft Saône", "category": "Résidentiel", "location": "Lyon", "image": { "src": "https://picsum.photos/seed/nova-proj5/1200/900", "alt": "Loft industriel rénové avec verrière" } }
+    ]
+  },
+  "testimonials": {
+    "title": "Ils nous ont fait confiance",
+    "items": [
+      { "quote": "Atelier Nova a su transformer un plateau brut en un lieu de travail chaleureux, sans jamais perdre de vue notre budget.", "author": "Claire Dumont", "role": "Fondatrice, Studio Bellevue" },
+      { "quote": "Une écoute rare et un vrai sens du détail. Notre maison nous ressemble enfin.", "author": "Karim & Sophie L.", "role": "Propriétaires, Maison des Tilleuls" },
+      { "quote": "Le suivi de chantier a été impeccable du premier croquis à la remise des clés.", "author": "Marc Vidal", "role": "Gérant, Café Lucine" }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Un projet en tête ?",
+    "text": "Parlons-en autour d'un café, à l'atelier ou par téléphone.",
+    "cta": { "label": "Prendre rendez-vous", "href": "#contact" }
+  },
+  "footer": {
+    "logo": "Atelier Nova",
+    "baseline": "Architecture & design d'intérieur, Lyon.",
+    "columns": [
+      { "title": "Studio", "links": [{ "label": "Le studio", "href": "#studio" }, { "label": "Approche", "href": "#approche" }, { "label": "Carrières", "href": "#" }] },
+      { "title": "Projets", "links": [{ "label": "Résidentiel", "href": "#" }, { "label": "Tertiaire", "href": "#" }, { "label": "Commercial", "href": "#" }] },
+      { "title": "Contact", "links": [{ "label": "contact@atelier-nova.fr", "href": "mailto:contact@atelier-nova.fr" }, { "label": "+33 4 78 00 00 00", "href": "tel:+33478000000" }] }
+    ],
+    "social": [{ "label": "Instagram", "href": "#" }, { "label": "LinkedIn", "href": "#" }],
+    "legal": "© 2026 Atelier Nova — Mentions légales — Confidentialité"
+  }
+}
