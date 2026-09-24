@@ -1,0 +1,68 @@
+.testimonials {
+  padding: var(--space-section) 0;
+}
+
+.inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.title {
+  font-size: var(--fs-h2);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+/* Mobile : les encadrés empilés */
+.list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Un encadré beige par témoignage */
+.card {
+  height: 100%;                      /* même hauteur pour tous en desktop */
+  margin: 0;
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;    /* l'auteur reste en bas de l'encadré */
+  gap: var(--space-md);
+}
+
+.quote {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: var(--color-primary);
+}
+
+/* L'auteur et son rôle, l'un sous l'autre */
+.caption {
+  display: flex;
+  flex-direction: column;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.role {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+/* Desktop : 3 encadrés côte à côte */
+@media (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .card {
+    padding: var(--space-lg);
+  }
+}

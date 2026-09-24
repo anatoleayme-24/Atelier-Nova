@@ -6,6 +6,7 @@ import Hero from "./components/sections/Hero";
 import Intro from "./components/sections/Intro";
 import Projects from "./components/sections/Projects";
 import Services from "./components/sections/Services";
+import Testimonials from "./components/sections/Testimonials";
 
 function App() {
   const { content, error, retry } = useHomepageContent();
@@ -26,6 +27,7 @@ function App() {
         <Intro intro={content.intro} />
         <Projects projects={content.projects} />
         <Services services={content.services} />
+        <Testimonials testimonials={content.testimonials} />
       </main>
     </>
   );
