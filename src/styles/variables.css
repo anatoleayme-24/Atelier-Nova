@@ -1,0 +1,37 @@
+/* Toutes les valeurs de la direction artistique au même endroit.
+   On les utilise ensuite avec var(--nom), par exemple : color: var(--color-text); */
+
+:root {
+  /* Couleurs */
+  --color-primary: #1F2A24;     /* encre : nav, footer, texte fort */
+  --color-accent: #C97C4B;      /* terracotta : CTA, survols */
+  --color-bg: #F7F4EF;          /* fond principal écru */
+  --color-surface: #EDE7DD;     /* fond des cartes et bandeaux */
+  --color-text: #24231F;        /* texte principal */
+  --color-text-muted: #6B675F;  /* texte secondaire, légendes */
+
+  /* Polices */
+  --font-title: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", Arial, sans-serif;
+
+  /* Tailles de texte (version mobile) */
+  --fs-h1: 1.9rem;      /* 30 px */
+  --fs-h2: 1.5rem;      /* 24 px */
+  --fs-h3: 1.2rem;      /* 19 px */
+  --fs-body: 1rem;      /* 16 px */
+  --fs-small: 0.85rem;  /* 13,6 px */
+
+  /* Espacements */
+  --space-sm: 1rem;        /* 16 px */
+  --space-md: 1.5rem;      /* 24 px */
+  --space-lg: 2.5rem;      /* 40 px */
+  --space-section: 4rem;   /* 64 px entre les sections */
+  --gutter: 1.25rem;       /* 20 px de marge sur les côtés */
+}
+
+/* Sur grand écran, on agrandit les titres et les espaces */
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 3rem;           /* 48 px */
+    --fs-h2: 1.6rem;         /* 26 px */
+    --space-section: 7rem;   /* 112 px */

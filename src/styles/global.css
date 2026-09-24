@@ -1,0 +1,56 @@
+/* 1. Les tailles incluent les bordures et les marges intérieures (plus simple à calculer) */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Le fond, la couleur et la police de toute la page */
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+
+/* 3. Les titres en Fraunces */
+h1, h2, h3 {
+  font-family: var(--font-title);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* 4. On retire les marges automatiques du navigateur */
+p, ul, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* 5. Les images ne dépassent jamais de leur conteneur */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Les listes sans puces (on les stylera nous-mêmes) */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 7. Les liens prennent la couleur du texte autour */
+a {
+  color: inherit;
+}
+
+/* 8. Accessibilité : un contour visible quand on navigue au clavier */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* 9. Défilement doux quand on clique sur un lien du menu */
+html {
+  scroll-behavior: smooth;
+}
