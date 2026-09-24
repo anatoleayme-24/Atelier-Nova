@@ -1,0 +1,39 @@
+/* Style commun à tous les boutons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;              /* zone tactile confortable */
+  padding: 0 1.5rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Variante principale : terracotta + texte foncé (contraste 4,8:1) */
+.primary {
+  background-color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-text);
+}
+
+.primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Variante contour : pour le header, plus discrète */
+.outline {
+  background-color: transparent;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}

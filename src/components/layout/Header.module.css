@@ -1,0 +1,98 @@
+/* Header collé en haut de l'écran pendant le scroll */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-surface);
+}
+
+.inner {
+  max-width: 75rem;
+  height: 4rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.logo em {
+  color: var(--color-accent);
+}
+
+/* --- Mobile : on cache la nav et le CTA, on montre le burger --- */
+.nav,
+.cta {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Liens de navigation avec un soulignement animé au survol */
+.links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.link {
+  position: relative;
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);           /* invisible au départ */
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+
+.link:hover::after,
+.link:focus-visible::after {
+  transform: scaleX(1);           /* le trait se dessine de gauche à droite */
+}
+
+/* --- À partir de 640 px : la nav apparaît, le burger disparaît --- */
+@media (min-width: 640px) {
+  .nav {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+/* --- À partir de 1024 px : il y a assez de place pour le CTA --- */
+@media (min-width: 1024px) {
+  .cta {
+    display: block;
+  }
+}
