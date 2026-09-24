@@ -1,0 +1,45 @@
+/* Bandeau sur fond carte */
+.banner {
+  background-color: var(--color-surface);
+  padding: var(--space-section) 0;
+}
+
+/* Mobile : titre, texte, puis bouton en dessous */
+.inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Titre plus grand qu'un h2 classique : c'est le dernier appel avant le footer */
+.title {
+  font-size: 1.9rem;
+  color: var(--color-primary);
+}
+
+/* Desktop : texte à gauche, bouton à droite */
+@media (min-width: 1024px) {
+  .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    font-size: 1.125rem;
+  }
+}
