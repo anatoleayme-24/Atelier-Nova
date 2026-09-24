@@ -57,7 +57,10 @@
 .link {
   position: relative;
   padding: 0.25rem 0;
-  font-size: 0.95rem;
+  font-family: var(--font-title);   /* même police que le logo */
+  font-weight: 500;
+  font-size: 1.05rem;               /* un poil plus grand : Fraunces paraît plus petite que Work Sans */
+  color: var(--color-primary);
   text-decoration: none;
 }
 

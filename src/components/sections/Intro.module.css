@@ -60,21 +60,13 @@
   color: var(--color-text-muted);
 }
 
-/* Desktop : titre à gauche, texte à droite, chiffres plus grands */
+/* Desktop : titre au-dessus du texte, chiffres plus grands */
 @media (min-width: 1024px) {
   .header {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 5rem;
-  }
-
-  .title {
-    flex: 1;
-    max-width: 26rem;
+    max-width: 48rem;           /* garde le bloc de texte compact et lisible */
   }
 
   .text {
-    flex: 1;
     font-size: 1.125rem;
   }
 
@@ -88,6 +80,6 @@
   }
 
   .label {
-  max-width: none;            /* en desktop, il y a la place : une seule ligne */
+    max-width: none;
   }
 }

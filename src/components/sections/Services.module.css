@@ -52,10 +52,10 @@
 /* ===== DESKTOP : 3 colonnes (numéro | nom | description) ===== */
 @media (min-width: 1024px) {
   .item {
-    grid-template-columns: 5rem 1fr 1.3fr;
-    align-items: baseline;
-    gap: var(--space-lg);
-    padding: var(--space-lg) 0;
+  grid-template-columns: 5rem 18rem 1fr;   /* numéro | nom (largeur fixe) | description */
+  align-items: baseline;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
   }
 
   .number {

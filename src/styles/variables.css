@@ -9,7 +9,8 @@
   --color-surface: #EDE7DD;     /* fond des cartes et bandeaux */
   --color-text: #24231F;        /* texte principal */
   --color-text-muted: #6B675F;  /* texte secondaire, légendes */
-  --color-accent-strong: #A9643A;  /* terracotta foncé : fond des boutons avec texte blanc (4,6:1) */
+  --color-accent-text: #A9643A;    /* terracotta foncé : numéros des services */
+--color-accent-strong: #A9643A;  /* terracotta foncé : fond des boutons avec texte blanc */
 
   /* Polices */
   --font-title: "Fraunces", Georgia, serif;
