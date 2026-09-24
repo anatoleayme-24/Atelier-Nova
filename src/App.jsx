@@ -4,6 +4,7 @@ import ErrorState from "./components/ui/ErrorState";
 import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero";
 import Intro from "./components/sections/Intro";
+import Projects from "./components/sections/Projects";
 
 function App() {
   const { content, error, retry } = useHomepageContent();
@@ -22,6 +23,7 @@ function App() {
       <main id="main">
         <Hero hero={content.hero} />
         <Intro intro={content.intro} />
+        <Projects projects={content.projects} />
       </main>
     </>
   );

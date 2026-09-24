@@ -1,0 +1,36 @@
+.projects {
+  padding: var(--space-section) 0;
+}
+
+.inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.title {
+  font-size: var(--fs-h2);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+/* Mobile : une seule colonne */
+.list {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+/* Tablette et desktop : 2 colonnes, celle de droite décalée vers le bas */
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--space-lg);
+    row-gap: 4rem;
+    align-items: start;
+  }
+
+  /* Les éléments pairs (2e, 4e...) sont dans la colonne de droite */
+  .list > li:nth-child(even) {
+    margin-top: 6rem;
+  }
+}

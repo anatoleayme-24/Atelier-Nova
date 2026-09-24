@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Le cadre cache ce qui dépasse quand l'image zoome */
+.media {
+  overflow: hidden;
+  background-color: var(--color-surface);   /* visible si l'image tarde */
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Survol : léger zoom sur l'image */
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.title {
+  font-size: var(--fs-h3);
+  color: var(--color-primary);
+}
+
+.meta {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+/* Accessibilité : pas de zoom pour ceux qui ont désactivé les animations */
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+
+  .card:hover .image {
+    transform: none;
+  }
+}
