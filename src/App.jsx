@@ -1,26 +1,21 @@
 import { useHomepageContent } from "./hooks/useHomepageContent";
+import Loading from "./components/ui/Loading";
+import ErrorState from "./components/ui/ErrorState";
 
 function App() {
   const { content, error, retry } = useHomepageContent();
 
   // 1. En cas d'erreur
   if (error) {
-    return (
-      <div role="alert">
-        <p>{error}</p>
-        <button type="button" onClick={retry}>Réessayer</button>
-      </div>
-    );
+    return <ErrorState message={error} onRetry={retry} />;
   }
 
   // 2. Pendant le chargement
   if (!content) {
-    return <p role="status">Chargement…</p>;
+    return <Loading />;
   }
 
   // 3. Les données sont là
-  console.log(content);
-
   return (
     <main>
       <h1>{content.hero.title}</h1>
