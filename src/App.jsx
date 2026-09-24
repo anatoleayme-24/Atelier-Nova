@@ -2,6 +2,7 @@ import { useHomepageContent } from "./hooks/useHomepageContent";
 import Loading from "./components/ui/Loading";
 import ErrorState from "./components/ui/ErrorState";
 import Header from "./components/layout/Header";
+import Hero from "./components/sections/Hero";
 
 function App() {
   const { content, error, retry } = useHomepageContent();
@@ -18,8 +19,7 @@ function App() {
     <>
       <Header navigation={content.navigation} />
       <main id="main">
-        <h1>{content.hero.title}</h1>
-        <p>{content.hero.subtitle}</p>
+        <Hero hero={content.hero} />
       </main>
     </>
   );

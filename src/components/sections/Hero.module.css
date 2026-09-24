@@ -1,0 +1,84 @@
+.hero {
+  padding: var(--space-lg) 0 var(--space-section);
+}
+
+/* Mobile : tout est empilé (texte puis image) */
+.inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Petit surtitre en majuscules espacées */
+.eyebrow {
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-size: var(--fs-h1);
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  max-width: 32rem;
+}
+
+.actions {
+  margin-top: var(--space-sm);
+}
+
+/* Mobile : bouton pleine largeur, comme dans la maquette */
+.actions a {
+  width: 100%;
+}
+
+/* Le fond gris s'affiche si l'image tarde ou ne charge pas */
+.media {
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-surface);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* remplit le cadre sans déformer l'image */
+}
+
+/* Tablette : le bouton reprend sa taille normale */
+@media (min-width: 768px) {
+  .actions a {
+    width: auto;
+  }
+}
+
+/* Desktop : texte à gauche, image à droite */
+@media (min-width: 1024px) {
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .content,
+  .media {
+    flex: 1;                  /* les deux colonnes font la même largeur */
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}
