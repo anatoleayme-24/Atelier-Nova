@@ -1,0 +1,87 @@
+/* Section sur fond carte */
+.intro {
+  background-color: var(--color-surface);
+  padding: var(--space-section) 0;
+}
+
+.inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Titre + texte */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.title {
+  font-size: var(--fs-h2);
+  color: var(--color-primary);
+}
+
+.text {
+  max-width: 65ch;              /* environ 65 caractères par ligne : confortable à lire */
+}
+
+/* Les 3 chiffres côte à côte, avec un fin trait terracotta au-dessus */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-accent);
+}
+
+/* column-reverse : le chiffre (dd) s'affiche au-dessus du libellé (dt) */
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.25rem;
+}
+
+.value {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.label {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+/* Desktop : titre à gauche, texte à droite, chiffres plus grands */
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  .title {
+    flex: 1;
+    max-width: 26rem;
+  }
+
+  .text {
+    flex: 1;
+    font-size: 1.125rem;
+  }
+
+  .stats {
+    gap: var(--space-lg);
+    padding-top: var(--space-lg);
+  }
+
+  .value {
+    font-size: 3.5rem;
+  }
+}

@@ -3,6 +3,7 @@ import Loading from "./components/ui/Loading";
 import ErrorState from "./components/ui/ErrorState";
 import Header from "./components/layout/Header";
 import Hero from "./components/sections/Hero";
+import Intro from "./components/sections/Intro";
 
 function App() {
   const { content, error, retry } = useHomepageContent();
@@ -20,6 +21,7 @@ function App() {
       <Header navigation={content.navigation} />
       <main id="main">
         <Hero hero={content.hero} />
+        <Intro intro={content.intro} />
       </main>
     </>
   );
